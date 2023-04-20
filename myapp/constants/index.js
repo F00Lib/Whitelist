@@ -61,6 +61,6 @@ export const abi = [
     ],
     "stateMutability": "view",
     "type": "function"
-  }
+  },
 ];
 export const WHITELIST_CONTRACT_ADDRESS = "0xFEcd2876318c1E86a5d7Ed4bA8CFF820674552C9";
