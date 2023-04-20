@@ -52,7 +52,7 @@ export default function Home() {
   /**
    * addAddressToWhitelist: Adds the current connected address to the whitelist
    */
-  const addAddressToWhitelist = async () => {
+  const addAddressToWhiteList = async () => {
     try {
       // We need a Signer here since this is a 'write' transaction.
       const signer = await getProviderOrSigner(true);
@@ -64,7 +64,7 @@ export default function Home() {
         signer
       );
       // call the addAddressToWhitelist from the contract
-      const tx = await whitelistContract.addAddressToWhitelist();
+      const tx = await whitelistContract.addAddressToWhiteList();
       setLoading(true);
       // wait for the transaction to get mined
       await tx.wait();
@@ -158,7 +158,7 @@ export default function Home() {
         return <button className={styles.button}>Loading...</button>;
       } else {
         return (
-          <button onClick={addAddressToWhitelist} className={styles.button}>
+          <button onClick={addAddressToWhiteList} className={styles.button}>
             Join the Whitelist
           </button>
         );
